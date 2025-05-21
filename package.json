@@ -9,6 +9,11 @@
     "build": "astro build",
     "preview": "astro preview"
   },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -18,5 +23,8 @@
     "@astrojs/upgrade": "^0.5.2",
     "astro": "^5.7.13",
     "preact": "^10.26.6"
+  },
+  "devDependencies": {
+    "cz-git": "^1.11.1"
   }
 }
