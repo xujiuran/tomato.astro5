@@ -4,6 +4,7 @@ import preact from '@astrojs/preact';
 
 // https://astro.build/config
 export default defineConfig({
-  base: 'tomato.astro5',
+  site: 'https://xujiuran.github.io/tomato.astro5',
+  base: '/',
   integrations: [preact()]
 });
