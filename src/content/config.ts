@@ -1,10 +1,10 @@
 // 导入 glob 加载器（loader）
-import { glob } from "astro/loaders";
+// import { glob } from "astro/loaders";
 // 从 `astro:content` 导入工具函数
 import { z, defineCollection } from "astro:content";
 // 为每个集合定义一个 `loader` 和 `schema`
 const blog = defineCollection({
-    loader: glob({ pattern: '**/[^_]*.md', base: "./src/blog" }),
+    // loader: glob({ pattern: '**/[^_]*.md', base: "./src/blog" }),
     schema: z.object({
       title: z.string(),
       pubDate: z.date(),

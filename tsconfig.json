@@ -12,9 +12,12 @@
       ],
       "@layouts/*": [
         "src/layouts/*"
-      ]
+      ],
+      "@images/*": [
+        "src/images/*"
+      ],
     },
     "jsx": "react-jsx",
-    "jsxImportSource": "preact"
+    "jsxImportSource": "preact",
   }
 }
