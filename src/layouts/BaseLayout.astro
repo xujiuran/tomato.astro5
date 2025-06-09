@@ -2,6 +2,8 @@
 import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
 import '../styles/global.css';
+import '../styles/theme.css';
+import '../styles/container.css';
 const { pageTitle, skillColor } = Astro.props;
 ---
 
@@ -13,6 +15,19 @@ const { pageTitle, skillColor } = Astro.props;
     <meta name="generator" content = {Astro.generator} >
     <title>Tomato's Blog</title>
     <style is:global define:vars={{ skillColor }}>
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+      .container {
+        flex: 1;
+        display: flex;
+        overflow-y: scroll;
+        flex-direction: column;
+        min-height: 100vh;
+        width: 1200px;
+        border: 1px solid #ccc;
+      }
       h1 {
         color: var(--skillColor);
       }
@@ -20,8 +35,10 @@ const { pageTitle, skillColor } = Astro.props;
   </head>
   <body>
     <Header />
-    <h1>{pageTitle}</h1>
-    <slot />
+    <div class="container">
+      <h1>{pageTitle}</h1>
+      <slot />
+    </div>
     <Footer />
     <script>
       import '../scripts/menu'

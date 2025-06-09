@@ -2,10 +2,20 @@
 import Navigation from "./Navigation.astro"
 import Hamburger from "./Hamburger.astro"
 import ThemeIcon from "./ThemeIcon.astro"
+import '../styles/navlink.scss'
 ---
+<style>
+  header {
+    position: sticky;
+    top: 0;
+  }
+  nav {
+    position: relative;
+  }
+</style>
 <header>
   <nav>
-    <Hamburger />
+    <!-- <Hamburger /> -->
     <ThemeIcon />
     <Navigation />
   </nav>

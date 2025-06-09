@@ -16,6 +16,9 @@
       "@images/*": [
         "src/images/*"
       ],
+      "@style/*": [
+        "src/style/*"
+      ],
     },
     "jsx": "react-jsx",
     "jsxImportSource": "preact",

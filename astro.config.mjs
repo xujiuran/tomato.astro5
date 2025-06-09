@@ -6,5 +6,9 @@ import preact from '@astrojs/preact';
 export default defineConfig({
   site: 'https://xujiuran.github.io/',
   base: 'tomato.astro5/',
-  integrations: [preact()]
+  integrations: [preact()],
+  i18n: {
+    locales: ["es", "en", "pt-br"],
+    defaultLocale: "en",
+  }
 });
