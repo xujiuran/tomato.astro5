@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@astrojs/ts-plugin": "^1.10.4",
-    "commitizen": "^4.3.1",
-    "cz-git": "^1.11.1"
+    "cz-git": "^1.11.1",
+    "sass-embedded": "^1.89.1"
   }
 }

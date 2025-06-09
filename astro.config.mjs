@@ -10,5 +10,8 @@ export default defineConfig({
   i18n: {
     locales: ["es", "en", "pt-br"],
     defaultLocale: "en",
+  },
+  legacy: {
+    collections: true
   }
 });
