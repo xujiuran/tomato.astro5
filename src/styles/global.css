@@ -21,6 +21,36 @@ body {
   line-height: 1.5;
 }
 
+/* 全局滚动条样式 */
+::-webkit-scrollbar {
+  width: 6px;  /* 垂直滚动条宽度 */
+  height: 6px; /* 水平滚动条高度 */
+}
+
+/* 滚动条轨道 */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05); /* 半透明浅色轨道 */
+  border-radius: 3px;
+}
+
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2); /* 半透明深色滑块 */
+  border-radius: 3px;
+  transition: background 0.2s; /* 悬停动画 */
+}
+
+/* 滚动条滑块悬停状态 */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3); /* 悬停时颜色加深 */
+}
+
+/* Firefox兼容方案 */
+* {
+  scrollbar-width: thin; /* 窄滚动条 */
+  scrollbar-color: rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.05); /* 滑块和轨道颜色 */
+}
+
 * {
   box-sizing: border-box;
 }
