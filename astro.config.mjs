@@ -11,7 +11,7 @@ export default defineConfig({
     locales: ["es", "en", "pt-br"],
     defaultLocale: "en",
   },
-  legacy: {
-    collections: true
-  }
+  // legacy: {
+  //   collections: true
+  // }
 });

@@ -36,6 +36,7 @@
     }
       return 'light';
   })();
+  console.log(theme);
 
   if (theme === 'light') {
     document.documentElement.classList.remove('dark');
@@ -50,44 +51,32 @@
     element.classList.toggle("dark");
 
     const isDark = element.classList.contains("dark");
+    console.log(element.classList);
+    
     localStorage.setItem("theme", isDark ? "dark" : "light");
   }
 
   const handleToggleViewClick = () => {
+    const element = document.documentElement;
     // 1. 判断浏览器支持
     if (!document.startViewTransition) {
         // 浏览器不支持，直接修改样式
-        document.documentElement.classList.toggle('dark');
+        element.classList.toggle('dark');
         return;
     }
 
     // 2. 获取过渡实例
     document.startViewTransition(() => {
         // 3. DOM修改
-        document.documentElement.classList.toggle('dark');
+        element.classList.toggle('dark');
     });
 
-    // 4. 自定义过渡动画（可选）
-    // transition.ready.then(() => {
-    //     const root = document.documentElement;
-    //     // 自定义动画逻辑，比如使用 clipPath
-    //     const animate = root.animate({
-    //         clipPath: [
-    //             'circle(0% at 50% 50%)', // 开始的圆的半径为0
-    //             'circle(100% at 50% 50%)' // 结束的圆的半径覆盖整个元素
-    //         ]
-    //     }, {
-    //         duration: 500, // 动画时长
-    //         fill: 'forwards' // 动画结束后保持最后的状态
-    //     });
-
-    //     // 动画结束后释放资源
-    //     animate.finished.then(() => {
-    //         // 动画结束后的清理
-    //         root.style.clipPath = ''; // 清空 clipPath
-    //     });
-    // });
+    const isDark = element.classList.contains("dark");
+    console.log(element.classList);
+    
+    localStorage.setItem("theme", !isDark ? "dark" : "light");
   }
 
+  // handleToggleViewClick()
   document.getElementById("themeToggle")?.addEventListener("click", handleToggleViewClick);
 </script>

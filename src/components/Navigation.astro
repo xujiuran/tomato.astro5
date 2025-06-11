@@ -1,9 +1,23 @@
 ---
+const { activeNavigate } = Astro.props
+
+console.log(activeNavigate, 'activeNavigate');
+
+
 ---
+<style>
+  a.active {
+    color: blue;
+  }
+  html.dark a.active {
+    color: red;
+  }
+</style>
+
 <div class="nav-links">
-  <a href="/tomato.astro5/">首页</a>
-  <a href="/tomato.astro5/about/">关于</a>
-  <a href="/tomato.astro5/blog/">博客</a>
-  <a href="/tomato.astro5/tags/">标签</a>
-  <a href="/tomato.astro5/test/">测试</a>
+  <a class={activeNavigate === '/' ? 'active' : ''} href="/tomato.astro5/">首页</a>
+  <!-- <a href="/tomato.astro5/blog/">博客</a> -->
+  <a class={activeNavigate === '/tags/' ? 'active' : ''} href="/tomato.astro5/tags/">标签</a>
+  <a class={activeNavigate === '/test/' ? 'active' : ''} href="/tomato.astro5/test/">测试</a>
+  <a class={activeNavigate === '/about/' ? 'active' : ''} href="/tomato.astro5/about/">关于</a>
 </div>

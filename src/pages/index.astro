@@ -2,9 +2,10 @@
 import BaseLayout from "@layouts/BaseLayout.astro"
 import Greeting from '../components/Greeting';
 const pageTitle = "首页"
+const activeNavigate = "/"
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout pageTitle={pageTitle} activeNavigate={activeNavigate} >
   <h1>这是一个测试astro的页面</h1>
   <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
 </BaseLayout>

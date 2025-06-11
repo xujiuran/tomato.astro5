@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from "astro:content";
 const pageTitle = "标签索引";
+const activeNavigate = "/tags/";
 const allPosts = await getCollection("blog");
 const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
 
@@ -27,7 +28,7 @@ console.log(tags);
     background-color: #F8FCFD;
   }
 </style>
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout pageTitle={pageTitle} activeNavigate={activeNavigate}>
   <div>
     {tags.map((tag) => <p>
       <a href={`/tomato.astro5/tags/${tag}`}>{tag}</a>

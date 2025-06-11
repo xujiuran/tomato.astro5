@@ -9,9 +9,9 @@ console.log(allBlogPosts, 'allBlogPosts');
 
 ---
 
-<BaseLayout title="博客">
+<BaseLayout title="博客" activeNavigate="/blog/">
   <p>在这里，我将分享我的 Astro 学习之旅。</p>
   <ul>
-    {allBlogPosts.map((post: any) => <BlogPost url={`blog/${post.slug}`} title = {post.data.title} />)}
+    {allBlogPosts.map((post: any) => <BlogPost url={`blog/${post.id}`} title = {post.data.title} />)}
   </ul>
 </BaseLayout>

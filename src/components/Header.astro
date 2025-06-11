@@ -3,6 +3,8 @@ import Navigation from "./Navigation.astro"
 import Hamburger from "./Hamburger.astro"
 import ThemeIcon from "./ThemeIcon.astro"
 import '../styles/navlink.scss'
+
+const { activeNavigate } = Astro.props;
 ---
 <style>
   header {
@@ -17,6 +19,6 @@ import '../styles/navlink.scss'
   <nav>
     <!-- <Hamburger /> -->
     <ThemeIcon />
-    <Navigation />
+    <Navigation activeNavigate={activeNavigate} />
   </nav>
 </header>
